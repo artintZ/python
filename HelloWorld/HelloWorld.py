@@ -1,2 +1,1 @@
-print("Hello world! ")
-print("测试git")
+print("Hello world! ") #仪式：学习编程语言第一个程序。
