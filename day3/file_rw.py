@@ -112,9 +112,16 @@ print(f.readline())
 print(f.tell())
 f.close()
 '''
-# 二进制读写
-#'''
-f = open('future', 'rb')
-print(f.read())
-#f = open('future', 'wb')
-#f.write('hello \r\nbinary'.encode())
+# # 二进制读写
+# #'''
+# f = open('future', 'rb')
+# print(f.read())
+# #f = open('future', 'wb')
+# #f.write('hello \r\nbinary'.encode())
+
+# 读取文件内容存入字典：读取部分必须是字典格式；列表同理
+with open('future', 'r', encoding='utf-8') as f:
+    string = f.read()
+    string = eval(string)
+    print(string)
+    print(string[1])
