@@ -1,7 +1,7 @@
 # Author: zzk
 
 
-# 反射：把字符串映射到类的属性或方法
+# 反射：把字符串映射到类的属性或方法 
 class Dog(object):
     def __init__(self, name):
         self.name = name
