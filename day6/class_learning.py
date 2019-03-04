@@ -21,6 +21,21 @@ n1.print_name()
 # name.name = 'ccc'
 print(n1.name)
 '''
+'''
+# 一切皆对象
+def func(self):
+    print('%s in the func'%self.name)
+
+
+def __init__(self, name):
+    self.name = name
+
+
+Foo = type('Foo', (object,), {'func': func, '__init__': __init__})
+f = Foo('zzk')
+f.func()
+'''
+
 
 # 继承(广度优先)
 '''
@@ -72,22 +87,26 @@ w1.make_friends(m1)
 
 # 多态(一种接口，多重实现)
 
+
 class Animal(object):
     def __init__(self, name, *args, **kwargs):
         self.name = name
         # super().__init__(*args, **kwargs)
-    
+
     @staticmethod
     def animal_talk(obj):
         obj.talk()
-    
+
+
 class Dog(Animal):
     def talk(self):
         print('Woof!Woof!')
 
+
 class Cat(Animal):
     def talk(self):
         print('Meow!')
+
 
 d1 = Dog('ddd')
 c1 = Cat('ccc')
