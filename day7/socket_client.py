@@ -4,9 +4,9 @@
 import socket
 
 client = socket.socket()
-client.connect('localhost', 6969)
+client.connect(('localhost', 6969))
 
-client.send('Hello world!')
+client.send(b'Hello world!')
 data = client.recv(1024)
 print(data)
 client.close()
