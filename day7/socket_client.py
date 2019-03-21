@@ -4,7 +4,7 @@
 import socket
 
 client = socket.socket()  # 声明socket类型，同时生成socket连接对象
-client.connect(('127.0.0.1', 6969))
+client.connect(('192.168.0.7', 6969))
 while True:
     msg = input().strip()
     if len(msg) == 0:
