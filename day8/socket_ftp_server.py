@@ -45,6 +45,9 @@ while True:
                 conn.send(line)
             print('file md5:', m.hexdigest())
             f.close()
-        print('send done')
+            conn.send(m.hexdigest().encode())
+            print('send done')
+        else:
+            conn.send(b'0')
 
 server.close()
