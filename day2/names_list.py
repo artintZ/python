@@ -13,7 +13,7 @@ names.extend(names2)
 names[3] = names[0] + 3  # 给列表指定位置重新赋值
 # 删
 del names[1]
-names.remove(0)  # 删除与括号内相同的所有元素（含多个）
+names.remove(0)  # 删除第一个出现的元素
 #names.pop()  # 丢掉（删除）默认最后一项
 names.pop(1)  # 删除指定索引值的元素
 #print(names.clear())  # 清空列表里的元素
