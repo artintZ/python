@@ -8,5 +8,4 @@ for i in range(len(s)-1):
         if int(s[j]) > int(s[j+1]):
             s[j], s[j+1] = s[j+1], s[j]
             cnt += 1
-else:
-    print(cnt)
+print(cnt)

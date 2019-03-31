@@ -1,66 +1,51 @@
-# Author: zzk
+# Author: zzs2_index
 
 
 # import sys
 
-q = "aabcc,dbbca,aadbbcbca"
-q = q.split(',')
-if len(q[0])+len(q[1])!=len(q[2]):
+# q = "aabcc,dbbca,aadbbcbca"
+q = 'aabcc,dbbca,aadbbcbcac'
+[s1, s2, s3] = q.split(',')
+if len(s1)+len(s2) != len(s3):
     print('false')
     exit(0)
-j = k = 0
-for i in q[2]:
-    if j < len(q[0]) and i == q[0][j]:
-        j += 1
-    elif k < len(q[1]) and i == q[1][k]:
-        k += 1
+for i in range(2):
+    s1_index = s2_index = 0
+    for num in s3:
+        if s1_index < len(s1) and num == s1[s1_index]:
+            s1_index += 1
+        elif s2_index < len(s2) and num == s2[s2_index]:
+            s2_index += 1
+        else:
+            if i == 1:
+                print('false')
+            break
     else:
-        # print('false')
+        print('true')
         break
-else:
-    print('true')
-    exit(0)
-
-j = k = 0
-for i in q[2]:
-    if k < len(q[1]) and i == q[1][k]:
-        k += 1
-    elif j < len(q[0]) and i == q[0][j]:
-        j += 1
-    else:
-        print('false')
-        break
-else:
-    print('true')
+    s1, s2 = s2, s1
 
 '''
 import sys
 
 for line in sys.stdin:
-    q = line.strip().split(',')
-    j = k = 0
-    for i in q[2]:
-        if j < len(q[0]) and i == q[0][j]:
-            j += 1
-        elif k < len(q[1]) and i == q[1][k]:
-            k += 1
+    [s1, s2, s3] = line.strip().split(',')
+    if len(s1)+len(s2) != len(s3):
+        print('false')
+        exit(0)
+    for i in range(2):
+        s1_index = s2_index = 0
+        for num in s3:
+            if s1_index < len(s1) and num == s1[s1_index]:
+                s1_index += 1
+            elif s2_index < len(s2) and num == s2[s2_index]:
+                s2_index += 1
+            else:
+                if i == 1:
+                    print('false')
+                break
         else:
-            # print('false')
+            print('true')
             break
-    else:
-        print('true')
-        continue
-
-    j = k = 0
-    for i in q[2]:
-        if k < len(q[1]) and i == q[1][k]:
-            k += 1
-        elif j < len(q[0]) and i == q[0][j]:
-            j += 1
-        else:
-            print('false')
-            break
-    else:
-        print('true')
+        s1, s2 = s2, s1
 '''
-

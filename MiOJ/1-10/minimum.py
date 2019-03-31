@@ -23,5 +23,5 @@ for n in range(final_lenth):
 minimum = ''
 for i in final_num:
     minimum +=i
-minimum = int(minimum)
+minimum = int(minimum)  # 去除高位的0
 print(str(minimum))
