@@ -7,7 +7,7 @@ s = '5,4,3,2,1'
 s = s.split(',')
 s.sort(key=int)
 print(s)
-temp, max = 1, 1
+temp=max = 1
 for i in range(len(s)-1):
     if int(s[i+1])-int(s[i])==1:
         temp +=1
