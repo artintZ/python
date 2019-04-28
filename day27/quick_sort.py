@@ -3,7 +3,7 @@
 
 import random
 
-
+# 跟着我，右手左手一个慢动作，右手左手慢动作重播
 def quick_sort(data, left, right):
     if left < right:
         mid = partition(data, left, right)
@@ -24,7 +24,7 @@ def partition(data, left, right):
     return left
 
 
-l = list(range(10))
+l = list(range(100))
 random.shuffle(l)
 print(l)
 quick_sort(l, 0, len(l) - 1)
